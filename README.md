@@ -135,7 +135,7 @@ SadNetV1 achieved strong results across all diseases:
   <tr>
     <td><img width="100%" src="https://github.com/user-attachments/assets/0d6e59e7-165d-4afb-a79e-ba941c545e51" /></td>
     <td><img width="100%" src="https://github.com/user-attachments/assets/e425b94e-1647-4f6f-a6e4-217498b25813" /></td>
-    <td><img width="100%" src="https://github.com/user-attachments/assets/54f947c2-89c3-4c3a-b8f3-7f2cc8c85b92" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/8f799a5b-a19c-4e0f-bea0-0cbb473a0990" /></td>
   </tr>
 </table>
 
@@ -166,7 +166,7 @@ SadNetV1 achieved strong results across all diseases:
 **👨‍💻 Shadman Rahman Sameen**  
 🎓 Undergraduate Student, Dept. of CSE  
 🏫 BRAC University, Dhaka, Bangladesh  
-📧 [shadman.rahman.sameen@g.bracu.ac.bd](mailto:shadman.rahman.sameen@g.bracu.ac.bd)  
+📧 [shadmanrahmansameen@gmail.com](mailto:shadmanrahmansameen@gmail.com) 
 🔗 GitHub: [github.com/ShadmanRahman786](https://github.com/ShadmanRahman786)
 
 ---
