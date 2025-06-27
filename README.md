@@ -12,53 +12,54 @@
 
 ## 🚀 Overview
 
-This research focuses on the early diagnosis of **Alzheimer’s**, **Parkinson’s**, and **Frontotemporal Dementia (FTD)** using **2D sagittal MRI slices** with a **pseudo-3D deep learning pipeline**.
+This research tackles early diagnosis of **Alzheimer’s**, **Parkinson’s**, and **Frontotemporal Dementia (FTD)** using **2D sagittal MRI slices** via a **pseudo-3D deep learning pipeline**.
 
-Our custom model, **SadNetV1**, builds on **MobileNetV2** and enhances feature learning with **Squeeze-and-Excitation (SE) attention blocks** for high-performance, lightweight disease classification.
+Our custom model, **SadNetV1**, integrates **MobileNetV2** with **Squeeze-and-Excitation (SE) attention blocks** for a lightweight yet highly effective classification pipeline.
 
-> 🧾 Status: Successfully submitted and defended at **BRAC University, Dept. of CSE**  
-> 🔐 Code & datasets are private due to ethical and academic regulations
+> 🧾 Successfully submitted & defended at **BRAC University, Dept. of CSE**  
+> 🔐 Code & datasets are private to uphold ethical and academic guidelines.
 
 ---
 
 ## 📚 Datasets Used
 
-- **ADNI** – Alzheimer’s MRI data  
-- **PPMI** – Parkinson’s data  
-- **FTD** – Neuroimaging data for Frontotemporal Dementia  
+- 🧠 **ADNI** – Alzheimer's Disease Neuroimaging Initiative  
+- 🧠 **PPMI** – Parkinson’s Progression Markers Initiative  
+- 🧠 **FTD** – Frontotemporal Dementia Neuroimaging (via IDA)
 
-**Preprocessing includes:**
-- 🎚️ Intensity clipping (0–255)
-- 🎨 Conditional CLAHE
-- 📏 Resizing (224×224)
-- 🧼 Normalization
-- 🧾 Saved as `.png` format
+### 🧼 Preprocessing Steps
+
+- Intensity Clipping → `[0–255]`
+- Contrast Enhancement → `Conditional CLAHE`
+- Image Resize → `224×224`
+- Normalization → `Standard scaling`
+- Saved format → `.png` files for CNN input
 
 ### 🧪 Sample MRI Slice
 <img width="395" alt="Sample Slice" src="https://github.com/user-attachments/assets/99c39dec-581a-4882-bfbf-8ff2e7b9097a" />
 
 ---
 
-## 🔄 Data Preprocessing Pipeline
+## 🔄 Preprocessing Pipeline
 
 <img width="438" alt="Preprocessing Flowchart" src="https://github.com/user-attachments/assets/374aa9c8-e204-496d-a6cb-b1b95e3cef39" />
 
 ---
 
-## 📈 Data Augmentation Process
+## 🧬 Data Augmentation & Split
 
-- 🔀 Dataset split into Train, Validation, Test sets
-- 🔄 Applied rotation, zoom, flips, contrast shifts
+- Dataset divided into `Train`, `Validation`, and `Test`
+- Augmentations: **rotation**, **zoom**, **flip**, **contrast adjustments**
 
-### 📊 Split Summary
+### 📊 Data Split Summary
 <img src="https://github.com/user-attachments/assets/d1160f6f-b775-4f2d-9283-992b45e8ef7f" style="width:50%; height:auto;" />
 
-### 🧪 Augmentation Pipeline
-<img src="https://github.com/user-attachments/assets/9e7cef07-9eaa-4517-abcc-d84917fe8b81" width="70%"/>
+### 🔁 Augmentation Pipeline
+<img src="https://github.com/user-attachments/assets/9e7cef07-9eaa-4517-abcc-d84917fe8b81" width="70%" />
 
 ---
 
-## 🔧 Model Workflow Diagram
+## ⚙️ Model Workflow
 
 <img src="https://github.com/user-attachments/assets/31602497-0db4-4f0f-9d06-38f9df7dfa15" width="75%" />
 
@@ -66,29 +67,29 @@ Our custom model, **SadNetV1**, builds on **MobileNetV2** and enhances feature l
 
 ## 🧠 Model Architecture – SadNetV1
 
-- 🧩 **Base**: MobileNetV2  
-- 🔁 **Attention**: Squeeze-and-Excitation (SE) Blocks  
-- 🎯 **Input**: Stacked 2D sagittal MRI (Pseudo-3D)  
-- ⚙️ **Optimizer**: Adam (`lr=1e-5`)  
-- 📉 **Loss**: Categorical Crossentropy  
+- 📌 **Backbone**: MobileNetV2  
+- 🧩 **Attention Layer**: Squeeze-and-Excitation (SE)  
+- 🖼️ **Input**: Pseudo-3D (stacked 2D MRI slices)  
+- 🧮 **Optimizer**: Adam (`lr=1e-5`)  
+- ❌ **Loss**: Categorical Crossentropy  
 
 ```mermaid
 graph LR
 A[Input MRI Slice] --> B[Preprocessing]
-B --> C[MobileNetV2 + SE]
+B --> C[MobileNetV2 + SE Blocks]
 C --> D[Classification Head]
 D --> E[Predicted Disease]
 ```
 
 ---
 
-## 📊 Performance Summary
+## 📊 Model Performance
 
-SadNetV1 achieved strong results across all diseases:
+> ✅ Our SadNetV1 model showed consistent, strong results:
 
-- ✅ **Train Accuracy**: 96.84%  
-- ✅ **Validation Accuracy**: 97.11%  
-- ✅ **Test Accuracy**: 96.15%
+- 🟢 **Train Accuracy**: 96.84%  
+- 🟡 **Validation Accuracy**: 97.11%  
+- 🔵 **Test Accuracy**: 96.15%
 
 ---
 
@@ -107,7 +108,22 @@ SadNetV1 achieved strong results across all diseases:
 
 ---
 
-## 🧠 Prediction Results
+## 🧮 Confusion Matrix – Test & Validation
+
+<table>
+  <tr>
+    <td align="center"><b>Test Confusion Matrix</b></td>
+    <td align="center"><b>Validation Confusion Matrix</b></td>
+  </tr>
+  <tr>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/821a565f-a8ca-43a6-96c2-d4fad21dc40e" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/b9c42e05-7d3a-4fa4-bc13-bf6f2008521c" /></td>
+  </tr>
+</table>
+
+---
+
+## 🧠 Prediction Results (By Class)
 
 <table>
   <tr>
@@ -124,13 +140,13 @@ SadNetV1 achieved strong results across all diseases:
 
 ---
 
-## 🔬 Grad-CAM Visualizations
+## 🔬 Grad-CAM Heatmaps
 
 <table>
   <tr>
-    <td align="center"><b>Grad-CAM for Alzheimer’s Disease</b></td>
-    <td align="center"><b>Grad-CAM for Parkinson’s Disease</b></td>
-    <td align="center"><b>Grad-CAM for FTD</b></td>
+    <td align="center"><b>AD: Grad-CAM</b></td>
+    <td align="center"><b>PD: Grad-CAM</b></td>
+    <td align="center"><b>FTD: Grad-CAM</b></td>
   </tr>
   <tr>
     <td><img width="100%" src="https://github.com/user-attachments/assets/0d6e59e7-165d-4afb-a79e-ba941c545e51" /></td>
@@ -141,32 +157,32 @@ SadNetV1 achieved strong results across all diseases:
 
 ---
 
-## 🌍 Future Work
+## 🔭 Future Directions
 
-- 🌐 Deploy as an interactive web app
-- 🧬 Integrate multi-modal inputs (MRI + PET)
-
----
-
-## 🛠️ Tech Stack
-
-- 💻 Python
-- 🔬 PyTorch
-- 🖼 OpenCV
-- 📊 NumPy, Pandas
-- 📈 Matplotlib, Seaborn
-- 🧠 NiBabel, pydicom
-- 🧪 Jupyter Notebook
+- 🚀 Deploy as an interactive web app (upload MRI, view prediction)
+- 🔗 Fuse MRI + PET data for multi-modal learning
 
 ---
 
-## 📎 Author & Contact
+## 🛠 Tech Stack
+
+- 🐍 Python
+- 🔥 PyTorch
+- 🎞 OpenCV
+- 📊 Pandas, NumPy
+- 📉 Matplotlib, Seaborn
+- 🧬 NiBabel, pydicom
+- 📓 Jupyter Notebook
+
+---
+
+## 🙋‍♂️ Author & Contact
 
 **👨‍💻 Shadman Rahman Sameen**  
-🎓 Undergraduate Student, Dept. of CSE  
+🎓 B.Sc in Computer Science & Engineering  
 🏫 BRAC University, Dhaka, Bangladesh  
-📧 [shadmanrahmansameen@gmail.com](mailto:shadmanrahmansameen@gmail.com) 
-🔗 GitHub: [github.com/ShadmanRahman786](https://github.com/ShadmanRahman786)
+📧 [shadmanrahmansameen@gmail.com](mailto:shadmanrahmansameen@gmail.com)  
+🔗 GitHub: [@ShadmanRahman786](https://github.com/ShadmanRahman786)
 
 ---
 
