@@ -145,7 +145,6 @@ SadNetV1 achieved strong results across all diseases:
 
 - 🌐 Deploy as an interactive web app
 - 🧬 Integrate multi-modal inputs (MRI + PET)
-- 🧠 Add attention explainability with SHAP & Grad-CAM++
 
 ---
 
