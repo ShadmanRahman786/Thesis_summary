@@ -5,7 +5,7 @@
   <i>Alzheimer’s, Parkinson’s & FTD Detection from MRI using Deep Learning</i><br><br>
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square">
   <img src="https://img.shields.io/badge/Data-ADNI,PPMI,FTD-orange?style=flat-square">
-  <img src="https://img.shields.io/badge/Model-MobileNetV2+SE-green?style=flat-square">
+  <img src="https://img.shields.io/badge/Model-SadNetV1-green?style=flat-square">
 </p>
 
 ---
