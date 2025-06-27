@@ -75,7 +75,6 @@ train- 96.84%
 
 ## 📈 Results & Visualizations
 
-<details>
 <p>Accuracy graph</p>
 <img width="718" alt="Screenshot 2025-06-27 at 6 07 22 PM" src="https://github.com/user-attachments/assets/3549ab69-192d-40a6-ad66-80da3b83bb07" />
 <p>Loss graph</p>
@@ -83,8 +82,6 @@ train- 96.84%
 <p>Test confusion matrix</p>
 <img width="439" alt="Screenshot 2025-06-27 at 6 07 56 PM" src="https://github.com/user-attachments/assets/93b569d5-bee3-4343-969d-6d9af9c745ea" />
 
-
-</details>
 
 ---
 
