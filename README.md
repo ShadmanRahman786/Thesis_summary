@@ -124,6 +124,23 @@ SadNetV1 achieved strong results across all diseases:
 
 ---
 
+## 🔬 Grad-CAM Visualizations
+
+<table>
+  <tr>
+    <td align="center"><b>Grad-CAM for Alzheimer’s Disease</b></td>
+    <td align="center"><b>Grad-CAM for Parkinson’s Disease</b></td>
+    <td align="center"><b>Grad-CAM for FTD</b></td>
+  </tr>
+  <tr>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/0d6e59e7-165d-4afb-a79e-ba941c545e51" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/e425b94e-1647-4f6f-a6e4-217498b25813" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/8f799a5b-a19c-4e0f-bea0-0cbb473a0990" /></td>
+  </tr>
+</table>
+
+---
+
 ## 🌍 Future Work
 
 - 🌐 Deploy as an interactive web app
