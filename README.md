@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>🎓 Undergraduate Thesis Project (Completed)</b><br>
-  <i>Alzheimer’s, Parkinson’s & FTD Detection from MRI using Deep Learning</i><br><br>
+  <i>Detection of Alzheimer’s, Parkinson’s & FTD from MRI using Deep Learning</i><br><br>
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square">
   <img src="https://img.shields.io/badge/Data-ADNI,PPMI,FTD-orange?style=flat-square">
   <img src="https://img.shields.io/badge/Model-SadNetV1-green?style=flat-square">
@@ -12,48 +12,65 @@
 
 ## 🚀 Overview
 
-This research focuses on the early diagnosis of Alzheimer’s, Parkinson’s, and Frontotemporal Dementia (FTD) using 2D sagittal MRI slices with a pseudo-3D deep learning approach. The architecture leverages a lightweight MobileNetV2 backbone enhanced with Squeeze-and-Excitation (SE) attention blocks for efficient and interpretable classification.
+This research focuses on the early diagnosis of **Alzheimer’s**, **Parkinson’s**, and **Frontotemporal Dementia (FTD)** using **2D sagittal MRI slices** with a **pseudo-3D deep learning pipeline**.
 
-> 🧾 Status: Thesis successfully submitted and defended at BRAC University, CSE Department.
+Our custom model, **SadNetV1**, builds on **MobileNetV2** and enhances feature learning with **Squeeze-and-Excitation (SE) attention blocks** for high-performance, lightweight disease classification.
 
-> ⚠️ Note: Code and datasets are kept private to uphold ethical and institutional regulations.
-
----
-
-## 📂 Datasets Used
-
-- **ADNI**: Alzheimer's Disease Neuroimaging Initiative — https://adni.loni.usc.edu  
-- **PPMI**: Parkinson’s Progression Markers Initiative — https://www.ppmi-info.org/  
-- **FTD**: Neuroimaging in Frontotemporal Dementia — https://ida.loni.usc.edu  
-
-MRI slices were processed using:
-- Intensity clipping to range 0–255
-- Conditional CLAHE for contrast enhancement
-- Resizing to 224×224 resolution
-- Normalization
-- Stored as .png files for CNN input
+> 🧾 Status: Successfully submitted and defended at **BRAC University, Dept. of CSE**  
+> 🔐 Code & datasets are private due to ethical and academic regulations
 
 ---
 
-## 🧪 Data Preprocessing Pipeline
+## 📚 Datasets Used
 
-![Pre_Processing_flow_chart drawio](https://github.com/user-attachments/assets/626cc488-7ec5-486b-864a-592694cbefba)
+- **ADNI** – Alzheimer’s MRI data  
+- **PPMI** – Parkinson’s data  
+- **FTD** – Neuroimaging data for Frontotemporal Dementia  
+
+**Preprocessing includes:**
+- 🎚️ Intensity clipping (0–255)
+- 🎨 Conditional CLAHE
+- 📏 Resizing (224×224)
+- 🧼 Normalization
+- 🧾 Saved as `.png` format
+
+### 🧪 Sample MRI Slice
+<img width="395" alt="Sample Slice" src="https://github.com/user-attachments/assets/99c39dec-581a-4882-bfbf-8ff2e7b9097a" />
 
 ---
 
-## 🔧 Proposed Model Workflow
+## 🔄 Data Preprocessing Pipeline
 
-![Work_Flow_Diagramof_Custom_Model drawio](https://github.com/user-attachments/assets/31602497-0db4-4f0f-9d06-38f9df7dfa15)
+<img width="438" alt="Preprocessing Flowchart" src="https://github.com/user-attachments/assets/374aa9c8-e204-496d-a6cb-b1b95e3cef39" />
 
 ---
 
-## 🧠 Model Architecture
+## 📈 Data Augmentation Process
 
-- Base Model: MobileNetV2
-- Enhancement: Squeeze-and-Excitation (SE) Attention Blocks
-- Input Type: Pseudo-3D (Stacked 2D sagittal MRI slices)
-- Optimizer: Adam (Learning rate = 1×10⁻⁵)
-- Loss Function: Categorical Crossentropy
+- 🔀 Dataset split into Train, Validation, Test sets
+- 🔄 Applied rotation, zoom, flips, contrast shifts
+
+### 📊 Split Summary
+<img src="https://github.com/user-attachments/assets/d1160f6f-b775-4f2d-9283-992b45e8ef7f" width="70%"/>
+
+### 🧪 Augmentation Pipeline
+<img src="https://github.com/user-attachments/assets/9e7cef07-9eaa-4517-abcc-d84917fe8b81" width="70%"/>
+
+---
+
+## 🔧 Model Workflow Diagram
+
+<img src="https://github.com/user-attachments/assets/31602497-0db4-4f0f-9d06-38f9df7dfa15" width="75%" />
+
+---
+
+## 🧠 Model Architecture – SadNetV1
+
+- 🧩 **Base**: MobileNetV2  
+- 🔁 **Attention**: Squeeze-and-Excitation (SE) Blocks  
+- 🎯 **Input**: Stacked 2D sagittal MRI (Pseudo-3D)  
+- ⚙️ **Optimizer**: Adam (`lr=1e-5`)  
+- 📉 **Loss**: Categorical Crossentropy  
 
 ```mermaid
 graph LR
@@ -67,51 +84,72 @@ D --> E[Predicted Disease]
 
 ## 📊 Performance Summary
 
-Our Proposed SadnetV1 gave us a solid result to detect Alzheimer's, Parkinson's and Fronto Temporal Dementia like-
-Test- 96.15%
-Validate- 97.11%
-train- 96.84%
+SadNetV1 achieved strong results across all diseases:
+
+- ✅ **Train Accuracy**: 96.84%  
+- ✅ **Validation Accuracy**: 97.11%  
+- ✅ **Test Accuracy**: 96.15%
+
 ---
 
 ## 📈 Results & Visualizations
 
-<p>Accuracy graph</p>
-<img width="718" alt="Screenshot 2025-06-27 at 6 07 22 PM" src="https://github.com/user-attachments/assets/3549ab69-192d-40a6-ad66-80da3b83bb07" />
-<p>Loss graph</p>
-<img width="719" alt="Screenshot 2025-06-27 at 6 07 37 PM" src="https://github.com/user-attachments/assets/dcf23989-f534-4ef9-9bc7-8474860c57e1" />
-<p>Test confusion matrix</p>
-<img width="439" alt="Screenshot 2025-06-27 at 6 07 56 PM" src="https://github.com/user-attachments/assets/93b569d5-bee3-4343-969d-6d9af9c745ea" />
+### 📊 Accuracy Graph
+<img width="718" alt="Accuracy Graph" src="https://github.com/user-attachments/assets/3549ab69-192d-40a6-ad66-80da3b83bb07" />
 
+### 📉 Loss Graph
+<img width="719" alt="Loss Graph" src="https://github.com/user-attachments/assets/dcf23989-f534-4ef9-9bc7-8474860c57e1" />
+
+### 🧩 Confusion Matrix
+<img width="439" alt="Confusion Matrix" src="https://github.com/user-attachments/assets/93b569d5-bee3-4343-969d-6d9af9c745ea" />
+
+---
+
+## 🔍 Prediction Results & Grad-CAM
+
+### 🧠 Predicted: Alzheimer’s Disease (AD)
+<img width="311" alt="Predicted AD" src="https://github.com/user-attachments/assets/078dd72b-b226-4ba0-84e9-950e293652ba" />
+
+### 🧠 Predicted: Parkinson’s Disease (PD)
+<img width="330" alt="Predicted PD" src="https://github.com/user-attachments/assets/d62e0406-77ab-4f43-970e-3f9585466056" />
+
+### 🧠 Predicted: Frontotemporal Dementia (FTD)
+<img width="331" alt="Predicted FTD" src="https://github.com/user-attachments/assets/f9b63741-7837-4679-ba9d-434bb281e9d4" />
+
+### 🔬 Grad-CAM Visuals
+<img width="415" alt="Grad-CAM 1" src="https://github.com/user-attachments/assets/0d6e59e7-165d-4afb-a79e-ba941c545e51" />
+<img width="395" alt="Grad-CAM 2" src="https://github.com/user-attachments/assets/e425b94e-1647-4f6f-a6e4-217498b25813" />
+<img width="416" alt="Grad-CAM 3" src="https://github.com/user-attachments/assets/8f799a5b-a19c-4e0f-bea0-0cbb473a0990" />
 
 ---
 
 ## 🌍 Future Work
 
-- Deploy as an interactive web app
-- Incorporate multi-modal imaging (MRI + PET)
-
+- 🌐 Deploy as an interactive web app
+- 🧬 Integrate multi-modal inputs (MRI + PET)
+- 🧠 Add attention explainability with SHAP & Grad-CAM++
 
 ---
 
-## 🛠️ Tools & Tech Used
+## 🛠️ Tech Stack
 
-- Python
-- PyTorch
-- OpenCV
-- NumPy & Pandas
-- Matplotlib & Seaborn
-- DICOM & NiBabel for medical imaging
-- Jupyter Notebook
+- 💻 Python
+- 🔬 PyTorch
+- 🖼 OpenCV
+- 📊 NumPy, Pandas
+- 📈 Matplotlib, Seaborn
+- 🧠 NiBabel, pydicom
+- 🧪 Jupyter Notebook
 
 ---
 
 ## 📎 Author & Contact
 
-Shadman Rahman Sameen  
-Undergraduate Student, Dept. of CSE  
-BRAC University, Dhaka, Bangladesh  
-📧 shadman.rahman.sameen@g.bracu.ac.bd  
-🔗 GitHub: https://github.com/ShadmanRahman786
+**👨‍💻 Shadman Rahman Sameen**  
+🎓 Undergraduate Student, Dept. of CSE  
+🏫 BRAC University, Dhaka, Bangladesh  
+📧 [shadman.rahman.sameen@g.bracu.ac.bd](mailto:shadman.rahman.sameen@g.bracu.ac.bd)  
+🔗 GitHub: [github.com/ShadmanRahman786](https://github.com/ShadmanRahman786)
 
 ---
 
