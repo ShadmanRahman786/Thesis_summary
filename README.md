@@ -51,7 +51,7 @@ Our custom model, **SadNetV1**, builds on **MobileNetV2** and enhances feature l
 - 🔄 Applied rotation, zoom, flips, contrast shifts
 
 ### 📊 Split Summary
-<img src="https://github.com/user-attachments/assets/d1160f6f-b775-4f2d-9283-992b45e8ef7f" width="70%"/>
+<img src="https://github.com/user-attachments/assets/d1160f6f-b775-4f2d-9283-992b45e8ef7f" style="width:50%; height:auto;" />
 
 ### 🧪 Augmentation Pipeline
 <img src="https://github.com/user-attachments/assets/9e7cef07-9eaa-4517-abcc-d84917fe8b81" width="70%"/>
@@ -94,31 +94,33 @@ SadNetV1 achieved strong results across all diseases:
 
 ## 📈 Results & Visualizations
 
-### 📊 Accuracy Graph
-<img width="718" alt="Accuracy Graph" src="https://github.com/user-attachments/assets/3549ab69-192d-40a6-ad66-80da3b83bb07" />
-
-### 📉 Loss Graph
-<img width="719" alt="Loss Graph" src="https://github.com/user-attachments/assets/dcf23989-f534-4ef9-9bc7-8474860c57e1" />
-
-### 🧩 Confusion Matrix
-<img width="439" alt="Confusion Matrix" src="https://github.com/user-attachments/assets/93b569d5-bee3-4343-969d-6d9af9c745ea" />
+<table>
+  <tr>
+    <td align="center"><b>📊 Accuracy Graph</b></td>
+    <td align="center"><b>📉 Loss Graph</b></td>
+  </tr>
+  <tr>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/3549ab69-192d-40a6-ad66-80da3b83bb07" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/dcf23989-f534-4ef9-9bc7-8474860c57e1" /></td>
+  </tr>
+</table>
 
 ---
 
-## 🔍 Prediction Results & Grad-CAM
+## 🧠 Prediction Results
 
-### 🧠 Predicted: Alzheimer’s Disease (AD)
-<img width="311" alt="Predicted AD" src="https://github.com/user-attachments/assets/078dd72b-b226-4ba0-84e9-950e293652ba" />
-
-### 🧠 Predicted: Parkinson’s Disease (PD)
-<img width="330" alt="Predicted PD" src="https://github.com/user-attachments/assets/d62e0406-77ab-4f43-970e-3f9585466056" />
-
-### 🧠 Predicted: Frontotemporal Dementia (FTD)
-<img width="331" alt="Predicted FTD" src="https://github.com/user-attachments/assets/f9b63741-7837-4679-ba9d-434bb281e9d4" />
-
-### 🔬 Grad-CAM Visuals
-<img width="415" alt="Grad-CAM 1" src="https://github.com/user-attachments/assets/0d6e59e7-165d-4afb-a79e-ba941c545e51" />
-<img width="395" alt="Grad-CAM 2" src="https://github.com/user-attachments/assets/e425b94e-1647-4f6f-a6e4-217498b25813" />
+<table>
+  <tr>
+    <td align="center"><b>Predicted: Alzheimer’s Disease (AD)</b></td>
+    <td align="center"><b>Predicted: Parkinson’s Disease (PD)</b></td>
+    <td align="center"><b>Predicted: Frontotemporal Dementia (FTD)</b></td>
+  </tr>
+  <tr>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/078dd72b-b226-4ba0-84e9-950e293652ba" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/d62e0406-77ab-4f43-970e-3f9585466056" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/f9b63741-7837-4679-ba9d-434bb281e9d4" /></td>
+  </tr>
+</table>
 
 ---
 
