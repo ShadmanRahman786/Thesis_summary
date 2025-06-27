@@ -119,7 +119,6 @@ SadNetV1 achieved strong results across all diseases:
 ### 🔬 Grad-CAM Visuals
 <img width="415" alt="Grad-CAM 1" src="https://github.com/user-attachments/assets/0d6e59e7-165d-4afb-a79e-ba941c545e51" />
 <img width="395" alt="Grad-CAM 2" src="https://github.com/user-attachments/assets/e425b94e-1647-4f6f-a6e4-217498b25813" />
-<img width="416" alt="Grad-CAM 3" src="https://github.com/user-attachments/assets/8f799a5b-a19c-4e0f-bea0-0cbb473a0990" />
 
 ---
 
