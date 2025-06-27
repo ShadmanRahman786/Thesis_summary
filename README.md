@@ -168,7 +168,7 @@ D --> E[Predicted Disease]
 
 - 🐍 Python
 - 🔥 PyTorch
-- 🎞 OpenCV
+- 🎞 OpenCV,Keras
 - 📊 Pandas, NumPy
 - 📉 Matplotlib, Seaborn
 - 🧬 NiBabel, pydicom
