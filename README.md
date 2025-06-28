@@ -30,6 +30,7 @@ Our custom model, **SadNetV1**, integrates **MobileNetV2** with **Squeeze-and-Ex
 ### 🧼 Preprocessing Steps
 
 - Intensity Clipping → `[0–255]`
+- Gamma Correction → `Conditional Gamma Correction`
 - Contrast Enhancement → `Conditional CLAHE`
 - Image Resize → `224×224`
 - Normalization → `Standard scaling`
