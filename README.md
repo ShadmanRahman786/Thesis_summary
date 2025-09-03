@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/Data-ADNI,PPMI,NIFTD-orange?style=flat-square">
   <img src="https://img.shields.io/badge/Model-SadNetV1-green?style=flat-square">
 </p>
+[View Thesis on BRACU DSpace](https://dspace.bracu.ac.bd/xmlui/handle/10361/26596)
 
 ---
 
